@@ -8,6 +8,8 @@ $(function() {
         $('html,body').animate({
           scrollTop: (target.offset().top - 60)
         }, 800);
+          
+        $('.main-nav ul').removeClass('show');
         
         return false;
       }
