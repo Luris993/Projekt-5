@@ -27,13 +27,17 @@ body {
     font-size: 2.5rem;
     color: #FFFFFF;
     font-weight: 500;
+    transition: .5s;
 }
 
-.fixed-top {
+.main-nav {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
+    letter-spacing: 1px;
+    height: 60px;
+    transition: .5s; 
     z-index: 1030;
 }
 
@@ -60,17 +64,13 @@ body {
     margin: 0 5px 0 0;
 }
 
-.main-nav {
-    letter-spacing: 1px;
-    height: 60px;
-    background: 0 0;
-}
-
 .main-nav ul {
+    overflow: hidden;
     list-style-type: none;
     margin: 0;
     padding: 0;
     float: right;
+    transition: .5s;
 }
 
 .main-nav ul li {
@@ -86,19 +86,26 @@ body {
     padding: 0 20px;
     line-height: 60px;
     font-weight: 400;
+    transition: .5s;
 }
 
 .main-nav a:hover {
     color: #42dca3;
 }
 
-.main-nav a:active {
-   color: #42dca3; 
-}
-
 .nav-black {
     background: #000000;
-    transition: .7s 
+    height: 70px;
+}
+
+.nav-black ul li a {
+    font-size: 1.7rem;
+    line-height: 70px;
+}
+
+.nav-black .brand-logo a {
+    line-height: 70px;
+    font-size: 3rem;
 }
 
 /* HERO */
@@ -134,7 +141,7 @@ body {
     border-radius: 50%;
     font-size: 3rem;
     color: #FFFFFF;
-    transition: all .5s;
+    transition: .5s;
 }
 
 .text-header .button:hover {
@@ -154,7 +161,7 @@ body {
     font-weight: 700;
     border: solid 1px #42dca3;
     padding: 15px 10px;
-    transition: all .6s;
+    transition: .6s;
 }
 
 .btn:hover {
@@ -179,7 +186,7 @@ body {
     border: solid 1px #42dca3; 
     padding: 10px;
     margin: 0 10px 0 0;
-    transition: all .6s;
+    transition: .6s;
 }
 
 .btn-social li a:hover {
@@ -226,17 +233,20 @@ body {
     
     .main-nav ul {
         width: 100%;
-        height: auto;
         background: #000000;
-        display: none;
+        max-height: 0;
     }
     
     .main-nav ul li {
         display: block;
     }
     
+    .main-nav ul li a {
+        line-height: 40px;
+    }
+    
     .main-nav .show {
-        display: block;
+        max-height: 400px;
     }
 }
 
